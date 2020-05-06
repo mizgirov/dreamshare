@@ -1,5 +1,16 @@
+.main-image {
+    z-index: -1;
+    width: 1440px;
+    height: 700px;
+    position: absolute;
+    background-image: url("../img/bg.png");
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+}
+
 .header {
-    background-color: red;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,6 +39,45 @@
             border: 1px solid white;
             border-radius: 2rem;
         }
+
+
     }
 }
 
+.promo {
+    position: relative;
+    //height: 52rem; need to find workaround for bigger screens
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    &__text {
+        font-weight: bold;
+        font-size: 5rem;
+        line-height: 63px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    &__subtext {
+        margin-top: 3rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+        color: #F7F3F2;
+
+    }
+
+    &__button {
+        margin-top: 3rem;
+        background-color: var(--color-primary);
+        text-align: center;
+
+    }
+}
