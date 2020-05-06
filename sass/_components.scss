@@ -1,0 +1,33 @@
+.header {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+
+    &__logo-text {
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        color: white;
+        text-transform: capitalize;
+
+        &--signup {
+            margin-right: 2rem;
+        }
+
+        &--signin {
+            padding: 1rem 2rem;
+            border: 1px solid white;
+            border-radius: 2rem;
+        }
+    }
+}
+

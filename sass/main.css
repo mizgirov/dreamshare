@@ -40,4 +40,47 @@ body {
   margin: auto;
   max-width: 94rem;
 }
+
+.header {
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4rem;
+}
+
+.header__logo-text {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.header__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  text-transform: capitalize;
+}
+
+.header__buttons--signup {
+  margin-right: 2rem;
+}
+
+.header__buttons--signin {
+  padding: 1rem 2rem;
+  border: 1px solid white;
+  border-radius: 2rem;
+}
 /*# sourceMappingURL=main.css.map */
