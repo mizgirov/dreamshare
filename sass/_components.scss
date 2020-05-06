@@ -1,12 +1,13 @@
-.main-image {
-    z-index: -1;
-    width: 1440px;
-    height: 700px;
-    position: absolute;
+body {
     background-image: url("../img/bg.png");
     opacity: 0.9;
+    height: 500px;
+    background-position: center;
+    /* Center the image */
     background-repeat: no-repeat;
-    overflow: hidden;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
 
 }
 
@@ -46,13 +47,14 @@
 
 .promo {
     position: relative;
-    //height: 52rem; need to find workaround for bigger screens
-    height: 70vh;
+    height: 52rem; //need to find workaround for bigger screens
+    // height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
+    margin-bottom: 15rem; //workaround to move next section
 
     &__text {
         font-weight: bold;
