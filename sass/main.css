@@ -42,7 +42,7 @@ body {
 }
 
 .section-name {
-  margin-top: 9rem;
+  margin-top: 5rem;
   text-align: center;
   font-weight: bold;
   font-size: 26px;
@@ -122,7 +122,7 @@ body {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
 }
 
 .promo__text {
@@ -148,5 +148,43 @@ body {
   margin-top: 3rem;
   background-color: var(--color-primary);
   text-align: center;
+}
+
+.how-it-works {
+  margin-top: 3rem;
+  display: -ms-grid;
+  display: grid;
+  height: 40rem;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+.how-it-works__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.how-it-works__item--1 {
+  max-width: 30rem;
+  background-image: url("../img/Step1.png");
+}
+
+.how-it-works__item--2 {
+  max-width: 30rem;
+  background-image: url("../img/Step2.png");
+}
+
+.how-it-works__item--3 {
+  max-width: 30rem;
+  background-image: url("../img/Step3.png");
 }
 /*# sourceMappingURL=main.css.map */
