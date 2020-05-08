@@ -1,121 +1,139 @@
 body {
-    background-image: url("../img/bg.png");
-    opacity: 0.9;
-    height: 500px;
-    background-position: center;
-    /* Center the image */
-    background-repeat: no-repeat;
-    /* Do not repeat the image */
-    background-size: cover;
-    /* Resize the background image to cover the entire container */
-
+  background-image: url("../img/bg.png");
+  opacity: 0.9;
+  height: 500px;
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+
+  &__logo-text {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  &__buttons {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 4rem;
+    color: white;
+    text-transform: capitalize;
 
-    &__logo-text {
-        color: white;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 2rem;
-        line-height: 2rem;
+    &--signup {
+      margin-right: 2rem;
     }
 
-    &__buttons {
-        display: flex;
-        align-items: center;
-        color: white;
-        text-transform: capitalize;
-
-        &--signup {
-            margin-right: 2rem;
-        }
-
-        &--signin {
-            padding: 1rem 2rem;
-            border: 1px solid white;
-            border-radius: 2rem;
-        }
-
-
+    &--signin {
+      padding: 1rem 2rem;
+      border: 1px solid white;
+      border-radius: 2rem;
     }
+  }
 }
 
 .promo {
-    position: relative;
-    height: 52rem; //need to find workaround for bigger screens
-    // height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin-bottom: 10rem; //workaround to move next section
+  position: relative;
+  height: 52rem; //need to find workaround for bigger screens
+  // height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 10rem; //workaround to move next section
 
-    &__text {
-        font-weight: bold;
-        font-size: 5rem;
-        line-height: 63px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #FFFFFF;
-    }
+  &__text {
+    font-weight: bold;
+    font-size: 5rem;
+    line-height: 63px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
 
-    &__subtext {
-        margin-top: 3rem;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        font-size: 24px;
-        line-height: 24px;
-        text-align: center;
-        color: #F7F3F2;
+  &__subtext {
+    margin-top: 3rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #f7f3f2;
+  }
 
-    }
-
-    &__button {
-        margin-top: 3rem;
-        background-color: var(--color-primary);
-        text-align: center;
-
-    }
+  &__button {
+    margin-top: 3rem;
+    background-color: var(--color-primary);
+    text-align: center;
+  }
 }
 
 .how-it-works {
-    margin-top: 3rem;
-    display: grid;
-    height: 40rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 3rem;
+  margin-top: 3rem;
+  display: grid;
+  height: 40rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
 
-    &__item {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+  }
 
-    }
+  &__item--1 {
+    max-width: 30rem;
+    background-image: url("../img/Step1.png");
+  }
 
-    &__item--1 {
-        max-width: 30rem;
-        background-image: url("../img/Step1.png");
-    }
+  &__item--2 {
+    max-width: 30rem;
+    background-image: url("../img/Step2.png");
+  }
 
-    &__item--2 {
-        max-width: 30rem;
-        background-image: url("../img/Step2.png");
-    }
+  &__item--3 {
+    max-width: 30rem;
+    background-image: url("../img/Step3.png");
+  }
 
-    &__item--3 {
-        max-width: 30rem;
-        background-image: url("../img/Step3.png");
-    }
+  &__item--icon {
+    max-width: 7rem;
+    background: #ff4e50;
+    border-radius: 40px;
+    text-align: center;
+    color: white;
+    letter-spacing: 3px;
+    line-height: 2rem;
+  }
 
-    &__item--icon {}
+  &__item--text {
+    margin-top: 2rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 26px;
+    color: white;
+  }
 
-    &__item--text {}
-
-    &__item--subtext {}
+  &__item--subtext {
+    margin-top: 2rem;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: #e3e3e3;
+  }
 }

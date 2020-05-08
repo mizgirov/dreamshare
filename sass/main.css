@@ -131,17 +131,17 @@ body {
   line-height: 63px;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .promo__subtext {
   margin-top: 3rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-  color: #F7F3F2;
+  color: #f7f3f2;
 }
 
 .promo__button {
@@ -171,6 +171,7 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  padding: 2rem;
 }
 
 .how-it-works__item--1 {
@@ -186,5 +187,34 @@ body {
 .how-it-works__item--3 {
   max-width: 30rem;
   background-image: url("../img/Step3.png");
+}
+
+.how-it-works__item--icon {
+  max-width: 7rem;
+  background: #ff4e50;
+  border-radius: 40px;
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+  line-height: 2rem;
+}
+
+.how-it-works__item--text {
+  margin-top: 2rem;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 26px;
+  color: white;
+}
+
+.how-it-works__item--subtext {
+  margin-top: 2rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 14px;
+  color: #e3e3e3;
 }
 /*# sourceMappingURL=main.css.map */
