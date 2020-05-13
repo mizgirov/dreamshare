@@ -1,290 +1,370 @@
 body {
-    background-image: url("../img/bg.png");
-    opacity: 0.9;
-    height: 500px;
-    background-position: center;
-    /* Center the image */
-    background-repeat: no-repeat;
-    /* Do not repeat the image */
-    background-size: cover;
-    /* Resize the background image to cover the entire container */
+  background-image: url("../img/bg.png");
+  opacity: 0.9;
+  height: 500px;
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+
+  &__logo-text {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  &__buttons {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 4rem;
+    color: white;
+    text-transform: capitalize;
 
-    &__logo-text {
-        color: white;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 2rem;
-        line-height: 2rem;
+    &--signup {
+      margin-right: 2rem;
     }
 
-    &__buttons {
-        display: flex;
-        align-items: center;
-        color: white;
-        text-transform: capitalize;
-
-        &--signup {
-            margin-right: 2rem;
-        }
-
-        &--signin {
-            padding: 1rem 2rem;
-            border: 1px solid white;
-            border-radius: 2rem;
-        }
+    &--signin {
+      padding: 1rem 2rem;
+      border: 1px solid white;
+      border-radius: 2rem;
+      &:hover {
+        background-color: rgba(#ffffff, 0.4);
+      }
     }
+
+    & a {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
 
 .promo {
-    position: relative;
-    height: 52rem; //need to find workaround for bigger screens
-    // height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin-bottom: 10rem; //workaround to move next section
+  position: relative;
+  height: 52rem; //need to find workaround for bigger screens
+  // height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 10rem; //workaround to move next section
 
-    &__text {
-        font-weight: bold;
-        font-size: 5rem;
-        line-height: 63px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #ffffff;
-    }
-
-    &__subtext {
-        margin-top: 3rem;
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-        font-size: 24px;
-        line-height: 24px;
-        text-align: center;
-        color: #f7f3f2;
-    }
-
-    &__button {
-        margin-top: 3rem;
-        padding: 15px;
-        border-radius: 20px;
-        background-color: var(--color-primary);
-        cursor: pointer;
-        border: none;
-        /*font styling*/
-        text-align: center;
-        color: white;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 14px;
-        letter-spacing: 2px;
-        line-height: 17px;
-
-        &:hover {
-            background-color: var(--color-primary-light);
-        }
-
-        &:active {
-            transform: scale(.9);
-            background-color: var(--color-primary-dark);
-        }
-
-
-
-    }
-}
-
-.how-it-works {
-    margin-top: 3rem;
-    display: grid;
-    height: 40rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 3rem;
-
-    &__item {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 2rem;
-    }
-
-    &__item--1 {
-        max-width: 30rem;
-        background-image: url("../img/Step1.png");
-    }
-
-    &__item--2 {
-        max-width: 30rem;
-        background-image: url("../img/Step2.png");
-    }
-
-    &__item--3 {
-        max-width: 30rem;
-        background-image: url("../img/Step3.png");
-    }
-
-    &__item--icon {
-        max-width: 7rem;
-        background: #ff4e50;
-        border-radius: 40px;
-        text-align: center;
-        color: white;
-        letter-spacing: 3px;
-        line-height: 2rem;
-    }
-
-    &__item--text {
-        margin-top: 2rem;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 26px;
-        color: white;
-    }
-
-    &__item--subtext {
-        margin-top: 2rem;
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 14px;
-        color: #e3e3e3;
-    }
-}
-
-.section-name__partners {
-    margin-top: 15rem;
-}
-
-.partners {
-    display: flex;
-    justify-content: space-between;
-
-    &__item {
-        margin-top: 5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        max-width: 20%;
-
-        &--img {
-            max-width: 12rem;
-            max-height: 12rem;
-        }
-
-        &--name {
-            margin-top: 1rem;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 17px;
-            color: #444444;
-        }
-
-        &--desc {
-            margin-top: 1rem;
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 14px;
-            color: #666666;
-        }
-    }
-}
-
-.other__partners {
-    margin-top: 9rem;
+  &__text {
+    font-weight: bold;
+    font-size: 5rem;
+    line-height: 63px;
     text-align: center;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  &__subtext {
+    margin-top: 3rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #f7f3f2;
+  }
+
+  &__button {
+    margin-top: 3rem;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    border: none;
+    /*font styling*/
+    text-align: center;
+    color: white;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
     letter-spacing: 2px;
     line-height: 17px;
-    padding: 15px;
-    background: #FFFFFF;
-    border: 2px solid #FF4E50;
-    color: #FF4E50;
-    border-radius: 40px;
 
     &:hover {
-        background-color: var(--color-primary-light);
-        color: white;
+      background-color: var(--color-primary-light);
     }
 
     &:active {
-        background-color: var(--color-primary-dark);
+      transform: scale(0.9);
+      background-color: var(--color-primary-dark);
+    }
+  }
+}
+
+.how-it-works {
+  margin-top: 3rem;
+  display: grid;
+  height: 40rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+  }
+
+  &__item--1 {
+    max-width: 30rem;
+    background-image: url("../img/Step1.png");
+  }
+
+  &__item--2 {
+    max-width: 30rem;
+    background-image: url("../img/Step2.png");
+  }
+
+  &__item--3 {
+    max-width: 30rem;
+    background-image: url("../img/Step3.png");
+  }
+
+  &__item--icon {
+    max-width: 7rem;
+    background: #ff4e50;
+    border-radius: 40px;
+    text-align: center;
+    color: white;
+    letter-spacing: 3px;
+    line-height: 2rem;
+  }
+
+  &__item--text {
+    margin-top: 2rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 26px;
+    color: white;
+  }
+
+  &__item--subtext {
+    margin-top: 2rem;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: #e3e3e3;
+  }
+}
+
+.section-name__partners {
+  margin-top: 15rem;
+}
+
+.partners {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 20%;
+
+    &--img {
+      max-width: 12rem;
+      max-height: 12rem;
     }
 
+    &--name {
+      margin-top: 1rem;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      color: #444444;
+    }
+
+    &--desc {
+      margin-top: 1rem;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 14px;
+      color: #666666;
+    }
+  }
+}
+
+.other__partners {
+  margin-top: 9rem;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 17px;
+  padding: 15px;
+  background: #ffffff;
+  border: 2px solid #ff4e50;
+  color: #ff4e50;
+  border-radius: 40px;
+
+  &:hover {
+    background-color: var(--color-primary-light);
+    color: white;
+  }
+
+  &:active {
+    background-color: var(--color-primary-dark);
+  }
 }
 
 .activity-ideas {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: repeat(3, 30rem);
-    grid-template-rows: repeat(3, 30rem);
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 27px;
-    color: white;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 30rem);
+  grid-template-rows: repeat(3, 30rem);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  color: white;
 
-    &-cell1 {
-        align-content: center;
-        background-image: url("../img/Sport.png");
-    }
+  &-cell1 {
+    align-content: center;
+    background-image: url("../img/Sport.png");
+  }
 
-    &-cell2 {
-        background-image: url("../img/Health.png");
-    }
+  &-cell2 {
+    background-image: url("../img/Health.png");
+  }
 
-    &-cell3 {
-        background-image: url("../img/Extreme.png");
-    }
+  &-cell3 {
+    background-image: url("../img/Extreme.png");
+  }
 
-    &-cell4 {
-        background-image: url("../img/Games.png");
-    }
+  &-cell4 {
+    background-image: url("../img/Games.png");
+  }
 
-    &-cell5 {
-        background-image: url("../img/Culture.png");
-        grid-column: 2 / 4;
-    }
+  &-cell5 {
+    background-image: url("../img/Culture.png");
+    grid-column: 2 / 4;
+  }
 
-    &-cell6 {
-        background-image: url("../img/Relax.png");
-        grid-column: 1 / 3;
-    }
+  &-cell6 {
+    background-image: url("../img/Relax.png");
+    grid-column: 1 / 3;
+  }
 
-    &-cell7 {
-        background-image: url("../img/Travel.png");
-    }
+  &-cell7 {
+    background-image: url("../img/Travel.png");
+  }
 }
 
 .cell-center-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .activity-ideas__section-name__decor {
-    margin-top: 16rem;
+  margin-top: 16rem;
 }
 
+.search-text {
+  margin-top: 3rem;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 14px;
+  color: #666666;
+}
+
+.search__wrapper {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.search_field {
+  margin-right: 1rem;
+  border-radius: 3px;
+}
+
+.search-parners-button {
+  background-color: #ff4e50;
+  color: white;
+  padding: 1rem;
+  border-radius: 20px;
+  border: none;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  &:active {
+    background-color: var(--color-primary-dark);
+  }
+}
+
+.search input {
+  width: 299px;
+  height: 40px;
+  &::placeholder {
+    color: #999999;
+  }
+}
 .footer {
-    border-top: 2px solid #ff4e50;
+  margin-top: 8rem;
+  padding: 2rem;
+  border-top: 2px solid #ff4e50;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 1rem;
+
+  &__logo {
+    grid-column: 1 / 2;
+    justify-self: end;
+  }
+
+  &__company {
+    justify-self: center;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__partners {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .footer__company li {
+    color: #999999;
+    font-weight: 300;
+    list-style-type: none;
+    font-size: 12px;
+    line-height: 22px;
+  }
 }
