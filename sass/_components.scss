@@ -38,6 +38,7 @@ body {
       padding: 1rem 2rem;
       border: 1px solid white;
       border-radius: 2rem;
+
       &:hover {
         background-color: rgba(#ffffff, 0.4);
       }
@@ -119,20 +120,23 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     padding: 2rem;
+    max-width: 100%;
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
   }
 
   &__item--1 {
-    max-width: 30rem;
     background-image: url("../img/Step1.png");
   }
 
   &__item--2 {
-    max-width: 30rem;
     background-image: url("../img/Step2.png");
   }
 
   &__item--3 {
-    max-width: 30rem;
     background-image: url("../img/Step3.png");
   }
 
@@ -322,6 +326,7 @@ body {
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
+
   &:active {
     background-color: var(--color-primary-dark);
   }
@@ -330,10 +335,12 @@ body {
 .search input {
   width: 299px;
   height: 40px;
+
   &::placeholder {
     color: #999999;
   }
 }
+
 .footer {
   margin-top: 8rem;
   padding: 2rem;
@@ -366,5 +373,106 @@ body {
     list-style-type: none;
     font-size: 12px;
     line-height: 22px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .container {
+    margin: auto;
+    width: 350px;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .header {
+    justify-content: center;
+
+    &__logo-text {
+      display: none;
+    }
+  }
+
+  .promo {
+    margin-bottom: 0;
+    height: 40rem;
+
+    &__text {
+      font-weight: bold;
+      font-size: 4rem;
+      line-height: 35px;
+    }
+  }
+
+  .how-it-works {
+    margin-top: 1rem;
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .cell-center-text {
+    padding: 5rem;
+    margin-bottom: 2rem;
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+  }
+
+  .activity-ideas {
+    display: block;
+  }
+
+  .section-name {
+    padding: 1rem;
+  }
+
+  .section-name__partners {
+    margin-top: 5rem;
+  }
+
+  .partners {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__item {
+      margin-top: 2rem;
+      max-width: 90%;
+    }
+  }
+
+  .search__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-parners-button {
+    margin-top: 7rem;
+    text-align: center;
+    position: absolute;
+    left: 33%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__logo {
+      align-self: center;
+    }
+    &__company {
+      margin-top: 1rem;
+      align-self: center;
+    }
+    &__partners {
+      display: none;
+    }
+    &__designed-by {
+      margin-top: 1rem;
+      align-self: center;
+    }
   }
 }
