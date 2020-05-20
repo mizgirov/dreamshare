@@ -376,10 +376,10 @@ body {
   }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 420px) {
   .container {
     margin: auto;
-    width: 350px;
+    width: 420px;
     max-width: 100% !important;
     overflow-x: hidden !important;
   }
